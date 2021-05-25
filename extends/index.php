@@ -8,11 +8,18 @@ class ShopProduct { // parent klasa
 
     public $title; // public metodi moze da se pristupi izvan klase a private ne moze
     public $price;
+    public static $num_items = 0; // broj instanci koje su napravljene
 
     function __construct($title="ShopProduct", $price=0) // argumenti - lenovo, 55000 itd
     {   
         $this->title = $title; // laptopu ili book dodaj title 
         $this->price = $price;
+        self::$num_items++;
+    }
+
+    public static function getAll()
+    {
+        return self::$num_items;
     }
 
 }
@@ -35,7 +42,9 @@ class ShopProduct { // parent klasa
 
 
     $laptop = new Laptop("Lenovo Y799", 55000, 14); // ako ne stavimo nista u zagradi imace vrednosti iz contruct - ShopProct i 0
-    $hp->display($laptop);
+    $laptop2 = new Laptop("Lenovo Y799", 55000, 14);
+    //$hp->display($laptop);
+    echo ShopProduct::getAll();
     
 
     // var_dump($laptop);
