@@ -3,14 +3,14 @@
 class Student {
     public function getInfo()
     {
-        return $this->name." ".$this->email;
+        return $this->name." ".$this->age;
     }
 
     public function compare(Student $student)
     {
-        if ($this->email > $student->email){
+        if ($this->age > $student->age){
             return $this->name." je stariji";
-        }elseif($this->email < $student->email){
+        }elseif($this->age < $student->age){
             return $this->name." je mladji";
         }else{
             return "ISTIH su Godina";
