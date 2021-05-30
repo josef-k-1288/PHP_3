@@ -9,7 +9,7 @@
 <body>
         <ul>
             <?php foreach($todos as $todo): ?>    
-                    <li><?php echo $todo->title; ?></li>
+                  <li><?php echo $todo->showTodo(); ?></li>
              <?php endforeach; ?>   
         </ul>
 </body>
