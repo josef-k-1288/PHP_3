@@ -17,9 +17,16 @@
             <h4 class="mb-5">Login</h4>
             <form action="login_register.php" method="POST">
                 <input type="text" name="login_email" placeholder="email" class="form-control" required><br>
-                <input type="text" name="password" placeholder="password" class="form-control" required><br><br>
+                <input type="text" name="login_password" placeholder="password" class="form-control" required><br><br>
                 <button class="form-control btn btn-primary" name="loginBtn">Login</button>
             </form>
+            <?php if($user->loggedUser): ?> <!-- ako je od samog usera njegov properti loggedUser -->
+                <div class="alert alert-success">Uspesno logovanje <a href="index.php">Odi na gblo</a></div>
+            <?php elseif(isset($_POST['loginBtn'])): ?>
+                <div class="alert alert-danger">Username i password pogresni</div>
+            <?php endif; ?>    
+
+
         </div>
         <div class="col-6">
         <h4>Register</h4>

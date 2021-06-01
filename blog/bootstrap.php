@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 $config = require 'config.php';
 
 require 'classes/Connection.php';
