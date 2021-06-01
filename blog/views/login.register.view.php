@@ -29,6 +29,10 @@
                 <input type="text" name="register_password" placeholder="password" class="form-control" required><br>
                 <button class="form-control btn btn-warning" name="registerBtn">Register</button>
             </form>
+            <?php if($user->register_result): ?>
+                    <div class="alert alert-success">Uspesna registracija! Ulogujte se</div>
+            <?php endif; ?>
+
         </div>
     </div>
 </div>
