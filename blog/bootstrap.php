@@ -10,8 +10,10 @@ $db = Connection::connect($config['database']); // prosledjivanje iz configa arr
 
 require 'classes/QueryBuilder.php';
 require 'classes/User.php';
+require 'classes/Post.php';
 
 $query = new QueryBuilder($db);
 $user = new User($db);
+$post = new Post($db);
 
 ?>

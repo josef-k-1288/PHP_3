@@ -19,6 +19,10 @@
 <div class="container" style="margin-top: 35px; ">
     <div class="row">
         <div class="col-8 offset-2">
+            <?php if($post->newPostStatus): ?>
+                <div class="alert alert-success">New Post inserted</div>
+            <?php endif; ?>
+
             <form action="add_post.php" method="POST">
                 <input type="text" name="post_title" placeholder="title" class="form-control"><br>
                 <textarea name="post_description" class="form-control" placeholder="description" cols="30" rows="10"></textarea><br>
