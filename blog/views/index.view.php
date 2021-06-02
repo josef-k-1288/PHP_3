@@ -24,6 +24,29 @@
     <h4>Blogger Posts</h4>
 </div>
 
+<div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <?php foreach($posts as $post): ?>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h3><?php echo $post->title; ?></h3>
+                        </div>
+                        <div class="card-body">
+                            <p><?php echo $post->description; ?></p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info btn-sm float-right">
+                                <?php $date = date_create($post->created_at); echo date_format($date, "Y-m-d"); ?>
+                            </button>
+                            
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+</div>
+
 <?php require_once 'partials/bottom.php'; ?>
 
 

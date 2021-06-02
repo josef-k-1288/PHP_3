@@ -2,9 +2,9 @@
 
 require_once 'bootstrap.php';
 
-$post = $post->selectAll('posts'); // koristi se iz queryBuildera selectAll funkcijom
+$posts = $post->selectAll('posts'); // koristi se iz queryBuildera selectAll funkcijom
 
-var_dump($post);
+//var_dump($posts);
 
 require_once 'views/index.view.php';
 
