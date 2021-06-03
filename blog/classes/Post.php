@@ -23,6 +23,26 @@
                 $this->newPostStatus = false;
             }
         }
+
+        public function deletePost($id)
+        {
+            //var_dump($id);
+            $sql = "DELETE FROM posts WHERE id = ?";
+            $query = $this->db->prepare($sql);
+            $query->execute([$id]);  
+
+        }
+
+        public function brisni($id)
+        {
+            //var_dump($id);
+            $sql = "DELETE FROM posts WHERE id = ?";
+            $query = $this->db->prepare($sql);
+            $query->execute([$id]);  
+
+        }
+
+
     }
 
 ?>
